@@ -11,6 +11,9 @@ class Inicio extends CI_Controller {
 	public function getContent($ruta="nada"){
 		$ruta = $_POST['ruta'];
 		$data = "helloJC";
+
+		// se carga la configuracion http requerida
+		$response = $this->admin->success();
 		// se evalua la ruta enviada y se retorna la seccion solicitada (por defecto se envia acerca de nosotros)
 		switch($ruta){
 			case "locate":
